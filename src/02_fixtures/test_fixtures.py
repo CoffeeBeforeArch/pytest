@@ -1,15 +1,6 @@
 # A simple example of test fixtures
 # By Nick from CoffeeBeforeArch
 
-import pytest
-
-# A simple fixture that generates some inputs
-# The cached result can be re-used by tests in the same module
-@pytest.fixture(scope="module")
-def expensive_input():
-    return [i for i in range(10)]
-
-
 # Simple function that squares a number
 def square(num):
     return num * num
