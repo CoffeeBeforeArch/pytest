@@ -15,13 +15,16 @@ def test_square(expensive_input):
         result = square(num)
         assert result == num ** 3
 
+
 # A parametrized test with one variant marked with xfail
-@pytest.mark.parametrize('num', [
-    pytest.param(1),
-    pytest.param(5, marks=pytest.mark.xfail),
-])
+@pytest.mark.parametrize(
+    "num",
+    [
+        pytest.param(1),
+        pytest.param(5, marks=pytest.mark.xfail),
+    ],
+)
 def test_multiple_square(num):
     assert num != 5
     result = square(num)
     assert result == num ** 3
-

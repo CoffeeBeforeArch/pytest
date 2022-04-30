@@ -7,4 +7,3 @@ import random
 @pytest.fixture
 def random_number():
     return random.randint(0, 10)
-
