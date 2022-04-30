@@ -21,7 +21,9 @@ def test_square(expensive_input):
     "num",
     [
         pytest.param(1),
-        pytest.param(5, marks=pytest.mark.xfail),
+        pytest.param(
+            5, marks=pytest.mark.xfail(reason="This values causes an assert!")
+        ),
     ],
 )
 def test_multiple_square(num):

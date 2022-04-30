@@ -21,7 +21,9 @@ def test_square(expensive_input):
     "num",
     [
         pytest.param(1),
-        pytest.param(429429243242, marks=pytest.mark.skip),
+        pytest.param(
+            429429243242, marks=pytest.mark.skip(reason="The input is too big!")
+        ),
     ],
 )
 def test_multiple_square(num):
