@@ -7,8 +7,9 @@ import pytest
 def square(num):
     return num * num
 
+
 # One test that uses our fixture
-@pytest.mark.parametrize('num', range(10))
+@pytest.mark.parametrize("num", range(10))
 def test_square(num):
     result = square(num)
     assert result == num ** 2

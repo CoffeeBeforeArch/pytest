@@ -9,4 +9,4 @@ def pytest_generate_tests(metafunc):
         for i in range(10):
             if i != 5:
                 entries.append(i)
-        metafunc.parametrize('num', entries)
+        metafunc.parametrize("num", entries)

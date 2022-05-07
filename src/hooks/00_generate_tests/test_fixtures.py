@@ -5,6 +5,7 @@
 def square(num):
     return num * num
 
+
 # One test that uses our fixture
 def test_square(num):
     result = square(num)

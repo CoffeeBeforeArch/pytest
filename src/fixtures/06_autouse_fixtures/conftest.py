@@ -7,8 +7,9 @@ import pytest
 def expensive_input():
     return [i for i in range(10)]
 
+
 @pytest.fixture(autouse=True)
 def setup_teardown():
-    print('Setup!')
+    print("Setup!")
     yield
-    print('Teardown!')
+    print("Teardown!")
