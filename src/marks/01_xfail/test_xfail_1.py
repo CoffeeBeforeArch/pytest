@@ -7,10 +7,10 @@ import pytest
 def square(num):
     return num + num
 
+
 # A single test marked with xfail (we expect the test to fail)
 def test_square():
     pytest.xfail()
     num = 5
     result = square(num)
     assert result == num ** 2
-

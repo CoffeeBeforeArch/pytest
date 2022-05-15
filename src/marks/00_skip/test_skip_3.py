@@ -9,7 +9,7 @@ def square(num):
 
 
 # A single test marked with skip
-@pytest.mark.skip(reason='Look! We are skipping this test!')
+@pytest.mark.skip(reason="Look! We are skipping this test!")
 def test_square():
     num = 5
     result = square(num)
