@@ -6,4 +6,5 @@ import pytest
 # A simple fixture that generates an input
 @pytest.fixture
 def num():
-    return 5
+    print('Providing the value 10!')
+    return 10
