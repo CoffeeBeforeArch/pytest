@@ -8,5 +8,6 @@ def square(num):
 
 # One test that uses our fixture
 def test_square(num):
+    print("Running our test!")
     result = square(num)
     assert result == num ** 2

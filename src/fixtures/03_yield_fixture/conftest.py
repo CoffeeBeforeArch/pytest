@@ -5,6 +5,6 @@ import pytest
 # A simple fixture that generates some inputs
 @pytest.fixture
 def num():
-    print("Before Test!")
+    print("Providing a value to our test!!")
     yield 5
-    print("After Test!")
+    print("Finishing Up!")
