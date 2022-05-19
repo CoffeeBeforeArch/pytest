@@ -7,8 +7,6 @@ def square(num):
 
 
 # One test that uses our fixture
-def test_square(expensive_input):
-    for num in expensive_input:
-        result = square(num)
-        assert result == num ** 2
-    print("Printing from test body!")
+def test_square(num):
+    result = square(num)
+    assert result == num ** 2

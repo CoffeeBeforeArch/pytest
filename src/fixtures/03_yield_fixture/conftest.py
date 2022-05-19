@@ -4,7 +4,7 @@ import pytest
 
 # A simple fixture that generates some inputs
 @pytest.fixture
-def expensive_input():
+def num():
     print("Before Test!")
-    yield [i for i in range(10)]
+    yield 5
     print("After Test!")
