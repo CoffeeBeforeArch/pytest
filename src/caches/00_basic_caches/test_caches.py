@@ -7,7 +7,6 @@ def square(num):
 
 
 # One test that uses our fixture
-def test_square(inputs):
-    for num in inputs:
-        result = square(num)
-        assert result == num ** 2
+def test_square(value):
+    result = square(value)
+    assert result == value ** 2
