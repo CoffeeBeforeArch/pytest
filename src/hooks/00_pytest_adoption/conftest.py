@@ -3,6 +3,7 @@
 
 import pytest
 
+# Adds the argparse-like option
 def pytest_addoption(parser):
     parser.addoption(
         '--name',
