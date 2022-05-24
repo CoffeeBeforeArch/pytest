@@ -12,7 +12,7 @@ def pytest_addoption(parser):
         help='Choose a name!'
     )
 
-# A simple fixture that gets a color
+# A simple fixture that gets our name option
 @pytest.fixture
 def name(request):
     return request.config.getoption('--name')
