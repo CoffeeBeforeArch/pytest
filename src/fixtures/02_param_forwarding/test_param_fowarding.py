@@ -3,13 +3,16 @@
 
 import pytest
 
+
 @pytest.fixture(autouse=True)
 def log_num(num):
     print(f"The value of num is {num}")
 
+
 # Simple function that squares a number
 def square(num):
     return num * num
+
 
 # One test that uses our fixture
 # The 'num_elements' parameter is automatically forwarded to our fixture

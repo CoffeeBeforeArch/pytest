@@ -17,7 +17,7 @@ def value(request):
 
     # If we didn't find the value generate it, and set it in the cache
     if not value:
-        print('Generating expensive value!')
+        print("Generating expensive value!")
         value = expensive_computation()
         request.config.cache.set("expensive_value", value)
 

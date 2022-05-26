@@ -7,6 +7,7 @@ import pytest
 def square(num):
     return num * num
 
+
 # Our test parametrized test
 @pytest.mark.parametrize("num1", [1, 2, 3])
 @pytest.mark.parametrize("num2", [4, 5, 6])

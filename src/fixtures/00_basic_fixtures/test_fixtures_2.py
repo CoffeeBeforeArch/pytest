@@ -8,14 +8,17 @@ import pytest
 def num1():
     return 5
 
+
 # A simple fixture that generates an input
 @pytest.fixture
 def num2():
     return 10
 
+
 # Simple function that squares a number
 def square(num):
     return num * num
+
 
 # A test using two fixtures
 def test_square(num1, num2):

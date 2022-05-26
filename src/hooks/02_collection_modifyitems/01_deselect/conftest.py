@@ -8,7 +8,7 @@ def pytest_collection_modifyitems(items, config):
     deselected = []
     for item in items:
         # Get the value from the callspec
-        num = item.callspec.params.get('num')
+        num = item.callspec.params.get("num")
         if num in [1, 5]:
             deselected.append(item)
         else:

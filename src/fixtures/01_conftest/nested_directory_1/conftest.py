@@ -6,4 +6,4 @@ import pytest
 # A simple fixture that prints that tests are starting
 @pytest.fixture(autouse=True)
 def log_start():
-    print('Test Starting!')
+    print("Test Starting!")
