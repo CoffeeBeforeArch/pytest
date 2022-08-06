@@ -1,4 +1,4 @@
-# A simple exaple of tests using pytest
+# A simple example of tests using pytest
 # By Nick from CoffeeBeforeArch
 
 # Simple function that squares a number
