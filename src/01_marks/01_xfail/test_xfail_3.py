@@ -2,6 +2,7 @@
 # By Nick from CoffeeBeforeArch
 
 import pytest
+import sys
 
 # Simple function that squares a number (with a bug!)
 def square(num):
@@ -9,7 +10,9 @@ def square(num):
 
 
 # A single test marked with xfail (we expect the test to fail)
-@pytest.mark.xfail(raises=AssertionError)
+@pytest.mark.xfail(
+    sys.version_info > (3, 6), reason="Test requires Python version <= 3.6!"
+)
 def test_square():
     num = 5
     result = square(num)

@@ -9,7 +9,7 @@ def square(num):
 
 
 # A single test marked with xfail (we expect the test to fail)
-@pytest.mark.xfail(strict=True)
+@pytest.mark.xfail(run=False)
 def test_square():
     num = 5
     result = square(num)
