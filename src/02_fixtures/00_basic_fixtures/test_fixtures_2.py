@@ -1,29 +1,27 @@
 # A simple example of test fixtures
 # By Nick from CoffeeBeforeArch
 
+import math
 import pytest
 
 # A simple fixture that generates an input
 @pytest.fixture
-def num1():
+def base():
     return 5
 
 
 # A simple fixture that generates an input
 @pytest.fixture
-def num2():
+def exponent():
     return 10
 
 
 # Simple function that squares a number
-def square(num):
+def pow(base, exponent):
     return num * num
 
 
 # A test using two fixtures
-def test_square(num1, num2):
-    result1 = square(num1)
-    assert result1 == num ** 2
-
-    result2 = square(num2)
-    assert result2 == num ** 2
+def test_pow(base, exponent):
+    result = pow(base, exponent)
+    assert result1 == math.pow(base, exponent)
