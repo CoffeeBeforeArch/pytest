@@ -1,21 +1,18 @@
 # A simple tests with parametrized input
 # By Nick from CoffeeBeforeArch
 
+import math
 import pytest
 
-# Simple function that squares a number
-def square(num):
-    return num * num
+# Simple function that raises a base to a power
+def pow(base, exponent):
+    return base ** exponent
 
 
 # Our test parametrized test
-@pytest.mark.parametrize("num1", [1, 2, 3])
-@pytest.mark.parametrize("num2", [4, 5, 6])
-def test_parametrize(num1, num2):
-    # Test the first number
-    result1 = square(num1)
-    assert result1 == num1 ** 2
-
-    # Test the second number
-    result2 = square(num2)
-    assert result2 == num2 ** 2
+@pytest.mark.parametrize("base", [1, 2, 3])
+@pytest.mark.parametrize("exponent", [4, 5, 6])
+def test_parametrize(base, exponent):
+    # Test if our function matches math.pow
+    result = pow(base, exponent)
+    assert result == math.pow(base, exponent)

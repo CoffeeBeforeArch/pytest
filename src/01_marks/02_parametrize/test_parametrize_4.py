@@ -9,7 +9,14 @@ def square(num):
 
 
 # Our test parametrized test
-@pytest.mark.parametrize("num", [1, 2, 3, 4, 5])
+@pytest.mark.parametrize(
+    "num",
+    [
+        pytest.param(-1, id="negative"),
+        pytest.param(0, id="zero"),
+        pytest.param(1, id="positive"),
+    ],
+)
 def test_square(num):
     result = square(num)
     assert result == num ** 2
