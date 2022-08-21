@@ -5,7 +5,7 @@ import pytest
 
 # A simple fixture that generates some inputs
 @pytest.fixture
-def num():
+def initial_value():
     return 5
 
 
@@ -15,6 +15,6 @@ def square(num):
 
 
 # One test that uses our fixture
-def test_square(num):
-    result = square(num)
-    assert result == num ** 2
+def test_square(initial_value):
+    result = square(initial_value)
+    assert result == initial_value ** 2
