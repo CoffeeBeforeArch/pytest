@@ -5,5 +5,5 @@ import pytest
 
 # A simple fixture that generates an input
 @pytest.fixture
-def num():
+def initial_value():
     return 5
