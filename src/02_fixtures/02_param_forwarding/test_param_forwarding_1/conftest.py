@@ -6,4 +6,4 @@ import pytest
 # This takes one parameter that is forwarded from the test
 @pytest.fixture
 def element_list(request):
-    return [i for i in range(request.param)]
+    return list(range(request.param))

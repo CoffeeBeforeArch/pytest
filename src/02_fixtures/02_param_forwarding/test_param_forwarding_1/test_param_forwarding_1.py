@@ -11,9 +11,10 @@ def sum_elements(elements):
         total += e
     return total
 
+
 # One test that uses our fixture
 # Our fixture and parameter have the same name!
 @pytest.mark.parametrize("element_list", [1, 2, 3, 4, 5], indirect=True)
-def test_square(element_list):
+def test_sum(element_list):
     result = sum_elements(element_list)
     assert result == sum(element_list)
