@@ -12,7 +12,7 @@ def sum_elements(elements):
     return total
 
 # One test that uses our fixture
-# The 'num_elements' parameter is automatically forwarded to our fixture
+# Our fixture/parameter have the same name!
 @pytest.mark.parametrize("element_list", [1, 2, 3, 4, 5], indirect=True)
 def test_square(element_list):
     result = sum_elements(element_list)
