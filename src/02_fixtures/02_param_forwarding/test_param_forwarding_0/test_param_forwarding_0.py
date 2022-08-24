@@ -15,6 +15,6 @@ def sum_elements(elements):
 # One test that uses our fixture
 # The 'num_elements' parameter is automatically forwarded to our fixture
 @pytest.mark.parametrize("num_elements", [1, 2, 3, 4, 5])
-def test_sum(element_list, num_elements):
+def test_sum(element_list):
     result = sum_elements(element_list)
     assert result == sum(element_list)
