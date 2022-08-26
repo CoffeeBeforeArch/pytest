@@ -12,7 +12,7 @@ def pytest_addoption(parser):
 # A pytest hook to dynamically parametrize tests
 def pytest_generate_tests(metafunc):
     # Check if the num fixture is used
-    if "num" in metafunc.fixturenames:
+    if "initial_value" in metafunc.fixturenames:
         # Get the command line option
         input_file = metafunc.config.getoption("--input_file")
 
@@ -24,4 +24,4 @@ def pytest_generate_tests(metafunc):
             data = [int(line) for line in lines]
 
         # Parametrize the test
-        metafunc.parametrize("num", data)
+        metafunc.parametrize("initial_value", data)
