@@ -9,7 +9,7 @@ def square(num):
 
 
 # One test that uses our fixture
-@pytest.mark.parametrize("num", range(10))
-def test_square(num):
-    result = square(num)
-    assert result == num ** 2
+@pytest.mark.parametrize("initial_value", range(10))
+def test_square(initial_value):
+    result = square(initial_value)
+    assert result == initial_value ** 2

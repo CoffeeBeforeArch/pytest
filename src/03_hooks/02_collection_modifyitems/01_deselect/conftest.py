@@ -3,12 +3,11 @@
 
 # A pytest hook to for modifying collected items
 def pytest_collection_modifyitems(items, config):
-    # Even tests are selected, odds are deselected
     selected = []
     deselected = []
     for item in items:
         # Get the value from the callspec
-        num = item.callspec.params.get("num")
+        num = item.callspec.params.get("initial_value")
         if num in [1, 5]:
             deselected.append(item)
         else:
