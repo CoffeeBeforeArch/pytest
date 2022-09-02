@@ -7,6 +7,6 @@ def square(num):
 
 
 # One test that uses our fixture
-def test_square(value):
-    result = square(value)
-    assert result == value ** 2
+def test_square(expensive_value):
+    result = square(expensive_value)
+    assert result == expensive_value ** 2
