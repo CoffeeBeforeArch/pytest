@@ -1,4 +1,4 @@
-# A simple example using conftest with test fixtures
+# A simple example of dynamic parametrization
 # By Nick from CoffeeBeforeArch
 
 # Simple function that squares a number

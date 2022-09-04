@@ -3,8 +3,7 @@
 import pytest
 
 # A simple fixture that generates some inputs
+# This takes one parameter that is forwarded from the test
 @pytest.fixture
-def initial_value():
-    print("Providing a value to our test!")
-    yield 5
-    print("Finishing Up!")
+def element_list(num_elements):
+    return list(range(num_elements))

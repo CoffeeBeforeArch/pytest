@@ -7,7 +7,7 @@ def square(num):
 
 
 # One test that uses our fixture
-def test_square(num):
+def test_square(initial_value):
     print("Running our test!")
-    result = square(num)
-    assert result == num ** 2
+    result = square(initial_value)
+    assert result == initial_value ** 2

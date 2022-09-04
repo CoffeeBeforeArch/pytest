@@ -1,15 +1,21 @@
 # conftest.py is a file that pytest will automatically import fixtures from
 
+import os
 
 # A pytest hook to for modifying collected items
 def pytest_collection_modifyitems(items, config):
-    # Even tests are selected, odds are deselected
+    # Get an environment variable
+    skip_odds = os.environ.get("SKIP_ODDS", "False").lower()
+    skip_odds = True if skip_odds == "true" else False
+
     selected = []
     deselected = []
     for item in items:
         # Get the value from the callspec
-        num = item.callspec.params.get("num")
-        if num in [1, 5]:
+        num = item.callspec.params.get("initial_value")
+
+        # Either add to deselected or selected lists
+        if skip_odds and num % 2:
             deselected.append(item)
         else:
             selected.append(item)

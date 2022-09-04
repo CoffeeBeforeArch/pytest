@@ -11,7 +11,7 @@ def expensive_computation():
 # A simple fixture that generates some inputs
 # This uses the special request fixture that we can use to access the cache
 @pytest.fixture
-def value(request):
+def expensive_value(request):
     # Try and get the value from the cache
     value = request.config.cache.get("expensive_value", None)
 
